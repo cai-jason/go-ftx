@@ -56,9 +56,9 @@ func (p *Client) newRequest(r Requester) *fasthttp.Request {
 		payload += string(body)
 
 		req.Header.Set("Content-Type", "application/json")
-		req.Header.Set("FTX-KEY", p.Auth.Key)
-		req.Header.Set("FTX-SIGN", p.Auth.Signature(payload))
-		req.Header.Set("FTX-TS", nonce)
+		req.Header.Set("FTXUS-KEY", p.Auth.Key)
+		req.Header.Set("FTXUS-SIGN", p.Auth.Signature(payload))
+		req.Header.Set("FTXUS-TS", nonce)
 
 		// set id is there UseSubAccountID
 		subaccount := p.Auth.SubAccount()
