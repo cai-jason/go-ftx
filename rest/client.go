@@ -8,7 +8,7 @@ import (
 	"github.com/valyala/fasthttp"
 )
 
-const ENDPOINT = "https://ftx.com/api"
+const ENDPOINT = "https://ftx.us/api"
 
 var json = jsoniter.ConfigCompatibleWithStandardLibrary
 
